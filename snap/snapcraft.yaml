@@ -4,6 +4,15 @@ summary: Set icon for any given X11 window
 description: |
   Xterm, and likely many other X11 programs, do not set themselves window icons, which window managers typically use to represent that program window in switcher lists, taskbars, and so on. This program can set the X11 window icon for any given window, to that of a given image file.
 
+  **Snap-specific information**
+
+  Due to the snap's confined nature the application can only access icons in the user's home directory.  To access icons under `/media` and `/mnt` directories you have to manually connect the snap to the `removable-media` interface by running the following command in a terminal:
+
+      sudo snap connect xseticon:removable-media
+
+  This is NOT an official distribution of xseticon, refer the snap's issue tracker for support:
+  https://github.com/Lin-Buo-Ren/xseticon-snap/issues
+
 license: GPL-2.0
 
 adopt-info: xseticon
