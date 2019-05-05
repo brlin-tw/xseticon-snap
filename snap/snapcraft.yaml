@@ -13,8 +13,6 @@ grade: stable
 
 parts:
   xseticon:
-    after:
-    - patching
     source: https://github.com/xeyownt/xseticon.git
     override-pull: |
       set -o nounset
@@ -69,14 +67,6 @@ parts:
     plugin: dump
     organize:
       '*': bin/
-
-  patching:
-    source: snap/local/patching
-    plugin: dump
-    organize:
-      '*': patching/
-    prime:
-    - -*
 
 apps:
   xseticon:
